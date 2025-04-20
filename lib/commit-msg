@@ -1,5 +1,6 @@
 #!/bin/sh
-# commitmonkey Hook
+# commitmonkey hook
+
 
 COMMIT_MSG_FILE=$1
 
@@ -8,5 +9,6 @@ if [ -z "$COMMIT_MSG_FILE" ]; then
   exit 1
 fi
 
-ROAST=$(node -e "console.log(require('./commitmonkey.js').getRoast())")
+MESSAGE="$(cat $COMMIT_MSG_FILE)"
+ROAST=$(__COMMITMONKEY_HOOK_PATH__ roast "$MESSAGE")
 echo "$ROAST" > $COMMIT_MSG_FILE

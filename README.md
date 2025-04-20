@@ -9,29 +9,43 @@ Because if you're going to break prod, at least be funny about it.
 
 ## Get started
 
-### Install Hook
-
-commitmonkey utilizes git hooks. The hook needs to be initialized in each repo.
-
+### Get commitmonkey
 ```shell
-npx commitmonkey init
+npm install -g commitmonkey
 ```
 
-### Usage
+### set options
+You configure options with yaml file in home directory `~/.commitmonkey.yaml`
+
+| option | details                                                                 |
+|--------|-------------------------------------------------------------------------|
+| mode   | Specify how the commit message is updated. Options: `replace` , `append` |
+| profile | Specify the personaility to use. Options: `intern`, `senior`, `ai`      |
+
+```shell
+cat > ~/.commitmonkey.yaml << 'END'
+mode: replace
+profile: intern
+END
+```
+
+
+### Install Hook
+
+commitmonkey utilizes git hooks. The hook needs to be initialized in each repo you want to be roasted in.
+Note: if you have any custom `commit-msg` - it will be overwritten.
+
+```shell
+cd ~/my-git-project
+commitmonkey init-hook
+```
+
+## Git Commits
 
 ```shell
 # you commit:
 git commit -m "fix typo"
 
 # roast appears:
-"Fixed a typo. Now only 473 problems remain."
+"Fixed a bug. Or made it worse. Who knows?"
 ```
-
-### Override2
-
-Lets you commit your original message (for release tags or actual grown-up work).
-
-```shell
-git commit -m "ABC-123: Urgent" --serious
-```
-
