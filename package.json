@@ -1,6 +1,6 @@
 {
   "name": "commitmonkey",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "commitmonkey is a Git hook that rewrites your boring commit messages into brutally honest, questionably professional roasts.",
   "main": "lib/commitmonkey.js",
   "repository": {
