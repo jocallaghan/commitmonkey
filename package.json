@@ -1,16 +1,18 @@
 {
-  "name": "@commitmonkey/commitmonkey",
-  "version": "0.1.1",
+  "name": "commitmonkey",
+  "version": "0.1.7",
   "description": "commitmonkey is a Git hook that rewrites your boring commit messages into brutally honest, questionably professional roasts.",
   "main": "lib/commitmonkey.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/commitmonkey/commitmonkey.git"
   },
+  "bin": {
+    "commitmonkey": "lib/commitmonkey.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access public",
-    "init": "node lib/commitmonkey.js init"
+    "pub": "npm publish --access public"
   },
   "keywords": [
     "git",

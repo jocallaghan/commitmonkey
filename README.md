@@ -14,7 +14,7 @@ Because if you're going to break prod, at least be funny about it.
 commitmonkey utilizes git hooks. The hook needs to be initialized in each repo.
 
 ```shell
-npx @commitmonkey/commitmonkey init
+npx commitmonkey init
 ```
 
 ### Usage
