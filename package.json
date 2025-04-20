@@ -1,0 +1,30 @@
+{
+  "name": "@commitmonkey/commitmonkey",
+  "version": "0.1.0",
+  "description": "commitmonkey is a Git hook that rewrites your boring commit messages into brutally honest, questionably professional roasts.",
+  "main": "lib/commitmonkey.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/commitmonkey/commitmonkey.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public",
+    "init": "node lib/commitmonkey.js init"
+  },
+  "keywords": [
+    "git",
+    "git-hooks",
+    "developer-tools",
+    "entertainment"
+  ],
+  "author": "Josh O'Callaghan <josh@ocallaghan.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/commitmonkey/commitmonkey/issues"
+  },
+  "homepage": "https://www.commitmonkey.dev",
+  "directories": {
+    "lib": "lib"
+  }
+}

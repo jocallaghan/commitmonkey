@@ -1,0 +1,12 @@
+#!/bin/sh
+# commitmonkey Hook
+
+COMMIT_MSG_FILE=$1
+
+if [ -z "$COMMIT_MSG_FILE" ]; then
+  echo "commitmonkey: No commit message file provided. Exiting."
+  exit 1
+fi
+
+ROAST=$(node -e "console.log(require('./commitmonkey.js').getRoast())")
+echo "$ROAST" > $COMMIT_MSG_FILE
