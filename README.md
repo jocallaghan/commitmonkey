@@ -1,34 +1,46 @@
-
 ![Logo: Monkey holding banana with a terminal showing 'fixed it. probably.'](commitmonkey-logo.png)
 
 # commitmonkey
-commitmonkey is a Git hook that rewrites your boring commit messages into brutally honest, questionably professional roasts.
+
+commitmonkey is a Git hook that rewrites your boring commit messages into brutally honest, questionably professional
+roasts.
 
 Because if you're going to break prod, at least be funny about it.
 
-
 ## Get started
 
-### Get commitmonkey
+### Get OpenAI API Key
+To generate messages that are relevant, it's best to use OpenAI.
+
+Create a project, add come credits and get an API key
+
+https://platform.openai.com/
+
+### Install commitmonkey
+
 ```shell
 npm install -g commitmonkey
 ```
 
-### set options
+### Set options
+
 You configure options with yaml file in home directory `~/.commitmonkey.yaml`
 
-| option | details                                                                 |
-|--------|-------------------------------------------------------------------------|
-| mode   | Specify how the commit message is updated. Options: `replace` , `append` |
-| profile | Specify the personaility to use. Options: `intern`, `senior`, `ai`      |
+| option     | details                                                                  |
+|------------|--------------------------------------------------------------------------|
+| mode       | Specify how the commit message is updated. Options: `replace` , `append` |
+| profile    | Specify the personaility to use. Options: `intern`, `senior`, `ai`       |
+| strategy   | Specify roast strategy. Options: `basic`, `openai`                       |
+| openApiKey | OpenAI API key to generate roasts. Needed for openai strategy.           |
 
 ```shell
 cat > ~/.commitmonkey.yaml << 'END'
 mode: replace
 profile: intern
+strategy: static 
+openApiKey: <ADD_YOUR_API_KEY>
 END
 ```
-
 
 ### Install Hook
 
