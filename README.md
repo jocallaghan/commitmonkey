@@ -26,25 +26,25 @@ npm install -g commitmonkey
 
 You configure options with yaml file in home directory `~/.commitmonkey.yaml`
 
-| option     | details                                                                  |
-|------------|--------------------------------------------------------------------------|
-| mode       | Specify how the commit message is updated. Options: `replace` , `append` |
-| profile    | Specify the personaility to use. Options: `intern`, `senior`, `ai`       |
-| strategy   | Specify roast strategy. Options: `basic`, `openai`                       |
-| openApiKey | OpenAI API key to generate roasts. Needed for openai strategy.           |
+| option     | details                                                                                                    |
+|------------|------------------------------------------------------------------------------------------------------------|
+| mode       | Specify how the commit message is updated. Options: `replace` , `append`                                   |
+| profile    | Specify the personality to use. You can use anything you like here. Ideas: `intern`, `senior`, `ai`, `cto` |
+| strategy   | Specify roast strategy. Options: `openai`, `basic` (hard coded replacements)                               |
+| openApiKey | OpenAI API key to generate roasts. Needed for openai strategy.                                             |
 
 ```shell
 cat > ~/.commitmonkey.yaml << 'END'
 mode: replace
-profile: intern
-strategy: static 
+profile: cto
+strategy: openai 
 openApiKey: <ADD_YOUR_API_KEY>
 END
 ```
 
 ### Install Hook
 
-commitmonkey utilizes git hooks. The hook needs to be initialized in each repo you want to be roasted in.
+commitmonkey uses git hooks. The hook needs to be initialized in each repo you want to be roasted in.
 Note: if you have any custom `commit-msg` - it will be overwritten.
 
 ```shell
