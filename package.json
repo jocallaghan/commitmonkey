@@ -1,6 +1,6 @@
 {
   "name": "commitmonkey",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "commitmonkey is a Git hook that rewrites your boring commit messages into brutally honest, questionably professional roasts.",
   "main": "lib/commitmonkey.js",
   "repository": {
@@ -30,7 +30,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "openai": "^4.95.1",
-    "yaml": "^2.7.1"
+    "openai": "^5.11.0",
+    "yaml": "^2.8.0"
   }
 }
